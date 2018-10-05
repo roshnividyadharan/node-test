@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Express trial 0</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <input type="button" value="Submit" id="btn">
+    </form>
+    <p id="tbl"></p>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(() => {
+        $("#btn").click(() => {
+            $.get("/home", function (obj) {
+                alert(obj);
+                console.log(obj);
+                //console.log("obj");
+
+                // var tbl = "<table border=1><tr><th>Firstname</th><th>Lastname</th></tr>";
+
+                // for (i = 0; i < obj.length; i++) {
+                //     tbl += "<tr><td>" + obj[i].name + "</td><td>" + obj[i].job + "</td></tr>"
+                // }
+
+                // tbl += "</table>";
+                // document.getElementById("tbl").innerHTML = tbl;
+            })
+
+        })
+    })
+
+</script>

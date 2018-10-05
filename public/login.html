@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>
+        Home Page
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+    <style>
+        /* body css for whole page */
+    body
+    {
+	    margin:0px;
+	    background-color:lightsalmon;
+	   
+	    color:#f9fcf5;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{
+        width:600px; 
+        height:auto; 
+        overflow:hidden; 
+        padding-bottom:20px; 
+        margin-left:auto; 
+        margin-right:auto; 
+        border-radius:5px; 
+        padding-left:10px; 
+        margin-top:100px; 
+        border-top:3px double #f1f1f1; 
+        border-bottom:3px double #f1f1f1; 
+        padding-top:20px;
+    }
+    
+    #main table{
+        font-family:"Comic Sans MS", cursive;
+        }
+    /* css code for textbox */
+    #main .tb{
+        height:28px; 
+        width:230px; 
+        border:1px solid #f26724; 
+        color:#fd7838; 
+        font-weight:bold; 
+        border-left:5px solid #f7f7f7; 
+        opacity:0.9;
+        }
+    
+    #main .tb:focus{
+        height:28px; 
+        border:1px solid #f26724; 
+        outline:none; 
+        border-left:5px solid #f7f7f7;
+        }
+
+    /* css code for button*/
+    #main .btn{
+        width:150px; 
+        height:32px; 
+        outline:none;  
+        color:#f7f7f7; 
+        font-weight:bold; 
+        border:0px solid #f26724; 
+        text-shadow: 0px 0.5px 0.5px #fff; 
+        border-radius: 2px; 
+        font-weight: 600; 
+        color: #f26724; 
+        letter-spacing: 1px; 
+        font-size:14px; 
+        background-color:#f1f1f1; 
+        -webkit-transition: 1s; 
+        -moz-transition: 1s; 
+        transition: 1s;
+        }
+  
+    #main .btn:hover{
+        background-color:#f26724; 
+        outline:none;  
+        border-radius: 2px; 
+        color:#f1f1f1; 
+        border:1px solid #f1f1f1;
+        -webkit-transition: 1s; 
+        -moz-transition: 1s; transition: 1s; 
+        }
+       #main .error {
+            color: crimson;
+            margin-left: 10px;
+        }
+
+        #main .correct {
+            color: chartreuse;
+            margin-left: 10px;
+        }
+	
+    </style>
+ 
+</head>
+
+<body>
+<form>
+    <!-- Main div code -->
+    <div id="main">
+        <div class="h-tag">
+            <h2 align="center">LOGIN</h2>
+        </div>
+        <!-- create account div -->
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+               
+                <tr>
+                    <td align="right">Enter Username :</td>
+                    <td>
+                        <input type="text" placeholder="Enter Username here" class="tb" id="uname" required/>
+                    </td>
+                    <td>
+                            <span class="error" id="uname_error">Please Enter a Valid Name</span>
+                            <span class="correct" id="uname_corr"></span>
+                        </td>
+                </tr>
+                <tr>
+                        <td align="right">Enter Password :</td>
+                    <td>
+                        <input type="password" placeholder="Enter Password here" class="tb" id="pswd"  required/>
+                    </td>
+                    <td>
+                            <span class="error" id="pswd_error">Please Enter a Valid Name</span>
+                            <span class="correct" id="pswd_corr"></span>
+                        </td>
+                </tr>
+                
+                    <td>
+                        <!--<input type="reset" value="Clear Form" id="res" class="btn" />-->
+                        <input type="button" value="LOGIN" class="btn"  id="btn" />
+                    </td>
+                    <td>
+                        <span class="error" id="ubtn_error"></span>
+                        <span class="correct" id="ubtn_corr"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> Not a member yet? <a href="index.html">Sign Up</a></td>
+                   
+                </tr>
+            </table>
+        </div>
+        <!-- create account box ending here.. -->
+    </div>
+    <!-- Main div ending here... -->>
+</form>
+</body>
+</html>

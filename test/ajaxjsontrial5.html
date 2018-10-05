@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Ajax JSON Trial 0</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="file5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <style>
+         .error {
+            color: crimson;
+            margin-left: 10px;
+        }
+
+        .correct {
+            color: chartreuse;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table border="0">
+            <tr>
+                <td>
+                    <input type="text" id="name">
+                </td>
+                <td>
+                    <span class="error" id="name_error">Please Enter a Valid Name</span>
+                    <span class="correct" id="name_corr"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="job">
+                </td>
+                <td>
+                        <span class="error" id="job_error">Please Enter a Valid Name</span>
+                        <span class="correct" id="job_corr"></span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Submit" id="btn">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <p id="tbl"></p>
+
+</body>
+
+</html>
