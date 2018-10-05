@@ -3,6 +3,7 @@
 # How to run 
   To run this assignment
   
+<<<<<<< HEAD
   ```
   npm run start
   ```
@@ -10,3 +11,9 @@
   page will be opened
    You can navigate to the login page from it.
    Using the credentials a valid user can login
+=======
+  ---
+  npm run start
+  ---
+   
+>>>>>>> 61518ae1580420576f2719e0e4483e5f28fbaf17
