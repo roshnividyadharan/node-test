@@ -9,3 +9,4 @@
   After successfully compiling the project the main page which is a registration
   page will be opened
    You can navigate to the login page from it.
+   Using the credentials a valid user can login
