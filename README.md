@@ -6,4 +6,6 @@
   ```
   npm run start
   ```
+  After successfully compiling the project the main page which is a registration
+  page will be opened
    
