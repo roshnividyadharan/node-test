@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node index"
   },
   "author": "roshni",
@@ -20,6 +20,7 @@
     "file-system": "^2.2.2",
     "jsonwebtoken": "^8.3.0",
     "module": "^1.2.5",
+    "nodemailer": "^4.6.8",
     "pg": "^7.4.3",
     "pg-promise": "^8.4.6",
     "promise": "^8.0.2",
@@ -27,6 +28,8 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^5.6.0"
+    "chai": "^4.2.0",
+    "eslint": "^5.6.0",
+    "mocha": "^5.2.0"
   }
 }

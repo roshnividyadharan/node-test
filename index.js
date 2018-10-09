@@ -6,12 +6,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+const { fork } = require('child_process');
+fork('./email.js');
 const logfileImport=require('./log/logFile');
 var home = require('./home');
-var register=require('./router/register');
-var login=require('./router/login');
-var user=require('./router/user');
-var admin=require('./router/admin');
+var register=require('./src/router/register');
+var login=require('./src/router/login');
+var user=require('./src/router/user');
+var admin=require('./src/router/admin');
 app.use('/register/register',register);
 app.use('/register/checkuname',register);
 app.use('/login/login',login);
