@@ -24,12 +24,12 @@ class UserService extends pgConnection {
                         let message = 'working user details fetch query';
                         logfileImport.emit('info', message);
                     }
-                    else {
-                        let status = false;
-                        reject(status);
-                        let message = 'error in user details fetch query';
-                        logfileImport.emit('info', message);
-                    }
+                    
+                }).catch(()=>{
+                    let status = false;
+                    reject(status);
+                    let message = 'error in user details fetch query';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception in user details fetch query';
@@ -58,12 +58,11 @@ class UserService extends pgConnection {
                                 let message = 'working user details edit query';
                                 logfileImport.emit('info', message);
                             }
-                            else {
-                                let statusEdit = false;
-                                reject(statusEdit);
-                                let message = 'error in user details edit query';
-                                logfileImport.emit('info', message);
-                            }
+                        }).catch(()=>{
+                            let statusEdit = false;
+                            reject(statusEdit);
+                            let message = 'error in user details edit query';
+                            logfileImport.emit('info', message);
                         });
                     } catch (error) {
                         let message = 'exception in user details fetch query';
@@ -90,12 +89,11 @@ class UserService extends pgConnection {
                         let message = 'working user details edit excluding password ';
                         logfileImport.emit('info', message);
                     }
-                    else {
-                        let statusEditall = false;
-                        reject(statusEditall);
-                        let message = 'error in user details edit excluding password';
-                        logfileImport.emit('info', message);
-                    }
+                }).catch(()=>{
+                    let statusEditall = false;
+                    reject(statusEditall);
+                    let message = 'error in user details edit excluding password';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception in user details edit excluding password';
@@ -120,12 +118,11 @@ class UserService extends pgConnection {
                         let message = 'working check username ';
                         logfileImport.emit('info', message);
                     }
-                    else {
-                        statusuCheck = true;
-                        reject(statusuCheck);
-                        let message = 'not working check username ';
-                        logfileImport.emit('info', message);
-                    }
+                }).catch(()=>{
+                    statusuCheck = true;
+                    reject(statusuCheck);
+                    let message = 'not working check username ';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exxception in  check username ';

@@ -16,7 +16,7 @@ class LoginService extends pgConnection {
 
         let params = [logObj.body.username, logObj.body.password];
         let self = this;
-       
+
         return new Promise((resolve, reject) => {
             let loginQuery = 'SELECT * FROM u_details WHERE u_name=$1';
             try {
@@ -26,8 +26,8 @@ class LoginService extends pgConnection {
                             console.log(useRpassword);
                             console.log(res.rows[0].u_pswd);
                             if (response) {
-                                
-                                var ob = {
+
+                                let ob = {
                                     'id': res.rows[0].id,
                                     'usertype': res.rows[0].user_type,
                                     'stat': true
@@ -37,14 +37,19 @@ class LoginService extends pgConnection {
                                 logfileImport.emit('info', message);
                             }
                             else {
-                                
-                                var statusCheck = false;
+
+                                let statusCheck = false;
                                 reject(statusCheck);
                                 let message = 'error in login query';
                                 logfileImport.emit('info', message);
                             }
                         });
                     }
+                }).catch(() => {
+                    let statusCheck = false;
+                    reject(statusCheck);
+                    let message = 'error in login query';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception in login query';

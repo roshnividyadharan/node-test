@@ -35,14 +35,12 @@ class RegService extends pgConnection {
                                 logfileImport.emit('info', message);
 
                             }
-                            else {
-                                status = false;
-                                reject(status);
-                                let message = 'error in register query';
-                                logfileImport.emit('info', message);
-
-
-                            }
+                           
+                        }).catch(()=>{
+                            status = false;
+                            reject(status);
+                            let message = 'error in register query';
+                            logfileImport.emit('info', message); 
                         });
                     } catch (error) {
                         let message = 'exception in register query';
@@ -70,13 +68,11 @@ class RegService extends pgConnection {
 
 
                     }
-                    else {
-                        statusuCheck = true;
-                        reject(statusuCheck);
-                        let message = 'username check not working';
-                        logfileImport.emit('info', message);
-
-                    }
+                }).catch(()=>{
+                    statusuCheck = true;
+                    reject(statusuCheck);
+                    let message = 'username check not working';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception in username check ';

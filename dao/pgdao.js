@@ -20,12 +20,6 @@ class pgConnection {
             self.dbConnection.query(query, queryParams, (err, res) => {
                 if (res.rowCount) {
                     resolve(res);
-                    // logfileImport.log({
-                    //     level: 'info',
-                    //     message: 'database operation working',
-                    //     'timestamp': new Date(),
-                    //     'operation_results': res.rows[0]
-                    // });
                 }
                 else {
                     reject(err);

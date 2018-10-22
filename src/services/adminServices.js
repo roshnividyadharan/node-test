@@ -28,12 +28,11 @@ class AdminService extends pgConnection {
                         let message = 'working list fetch query';
                         logfileImport.emit('info', message);
                     }
-                    else {
-                        let listStatus = false;
-                        reject(listStatus);
-                        let message = 'not working list fetch query';
-                        logfileImport.emit('info', message);
-                    }
+                }).catch(()=>{
+                    let listStatus = false;
+                    reject(listStatus);
+                    let message = 'not working list fetch query';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception list users fetch query';
@@ -85,12 +84,12 @@ class AdminService extends pgConnection {
                         let message = 'working admin change query';
                         logfileImport.emit('info', message);
                     }
-                    else {
-                        changeStatus = false;
-                        reject(changeStatus);
-                        let message = 'not working admin change query';
-                        logfileImport.emit('info', message);
-                    }
+                    
+                }).catch(()=>{
+                    changeStatus = false;
+                    reject(changeStatus);
+                    let message = 'not working admin change query';
+                    logfileImport.emit('info', message);
                 });
             } catch (error) {
                 let message = 'exception in admin change query';
