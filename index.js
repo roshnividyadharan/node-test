@@ -6,8 +6,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-const { fork } = require('child_process');
-fork('./email.js');
+// const { fork } = require('child_process');//code for forking email
+// fork('./email.js');
+const { spawn } = require('child_process');
+const bat = spawn('cmd.exe', ['/c', 'D:\\nginx\\nginx-1.14.0\\html\\backup2\\testBatfile.bat']);
+bat.stdout.on('data', (data) => {
+    console.log(unescape(data));
+});
 const logfileImport=require('./log/logFile');
 var home = require('./home');
 var register=require('./src/router/register');
